@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="shortcut icon" href="icons8-code-80.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.6/ace.js"></script>
+</head>
+<body onload="initializeEditors()">
+    <div id="tabs">
+        <button class="tabButton" onclick="showEditor('html')">HTML</button>
+        <button class="tabButton" onclick="showEditor('css')">CSS</button>
+        <button class="tabButton" onclick="showEditor('js')">JavaScript</button>
+        <button class="tabButton" onclick="showEditor('all')">All</button>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div id="editorContainer">
+        <div id="htmlEditor" class="editor"></div>
+        <div id="cssEditor" class="editor"></div>
+        <div id="jsEditor" class="editor"></div>
+    </div>
+    
+    <iframe id="preview" frameborder="0"></iframe>
+    
+    <script src="script.js"></script>
+</body>
+</html>
